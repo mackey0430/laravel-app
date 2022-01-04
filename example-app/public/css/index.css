@@ -1,0 +1,179 @@
+/* 共通CSS 開始*/
+  /* 変数定義 */
+  :root{
+    --white: white;
+    --green: #ADBD31;
+    --red:#F24542;
+  }
+
+  /* 1remを10pxにする */
+  html{
+    font-size: 62.5%;
+  }
+
+  body{
+    background: #f2f2f2;
+    /* フッターを画面下部に固定するためのcss */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  input, textarea{
+    background: #fff;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    padding: 8px;
+  }
+
+  textarea{
+    resize: none;
+  }
+
+  a{
+    transition: .2s;
+  }
+
+  a:hover{
+    opacity: .2;
+  }
+
+  .inner{
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left:64px;
+    padding-right:64px;
+  }
+
+  button{
+    width: 80px;
+    padding: 8px;
+    margin-top: 24px;
+    text-align: center;
+    border-radius: 16px;
+    background: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    box-shadow: 0px 3px 12px #00000029;
+    transition: .2s;
+  }
+
+  button:hover{
+    opacity: .8;
+  }
+
+/* 共通CSS 終了 */
+
+
+/* ヘッダー 開始 */
+  .header{
+    position: fixed;
+    top:0;
+    width:100%;
+    height: 64px;
+    margin-bottom: 64px;
+    background: var(--green);
+    box-shadow: 0px 3px 12px #00000029;
+  }
+
+  .header__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__title{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+  }
+/* ヘッダー 終了 */
+
+
+/* メイン 開始 */
+  .main{
+    width: 100%;
+    margin-top: 64px;
+    padding-bottom: 64px;
+    /* フッターを画面下部に固定するためのcss */
+    flex: 1;
+  }
+
+  .main__inner{
+    padding-top: 64px;
+  }
+
+  .posts > * + *{
+    margin-top: 24px;
+  }
+
+  .posts__item > * + *{
+    margin-top: 8px;
+  }
+
+  .posts__item{
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    background: var(--green);
+    border-radius: 50px;
+    box-shadow: 0px 3px 12px #00000029;
+    border-radius: 8px;
+  }
+
+  .buttonArea{
+    margin-left: auto;
+  }
+
+  .buttonArea > * + *{
+    margin-left: 16px;
+  }
+
+  .submitButton{
+    /* color: var(--green); */
+  }
+  
+  .deleteButton{
+    color: var(--white);
+    background: var(--red);
+  }
+
+
+
+  .label{
+    font-size: 1.6rem;
+    color: white;
+    font-weight: bold;
+  }
+
+/* メイン 終了 */
+
+
+/* フッター 開始 */
+.footer{
+  width:100%;
+  min-height: 120px;
+  display: flex;
+  background: var(--green);
+
+}
+
+.footer__inner{
+  margin-top: 64px;
+  padding-bottom: 64px;
+  color: white;
+}
+
+.footer__github-link{
+  font-size: 1.6rem;
+}
+
+.fa-github{
+  font-size: 2.4rem;
+  padding-right: 8px;
+}
+
+
+
+/* フッター 終了 */
